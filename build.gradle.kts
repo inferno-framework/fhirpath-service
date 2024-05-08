@@ -18,8 +18,8 @@ dependencies {
     implementation("ca.uhn.hapi.fhir", "org.hl7.fhir.r4", "${property("fhirCoreVersion")}")
     implementation("ca.uhn.hapi.fhir", "org.hl7.fhir.utilities", "${property("fhirCoreVersion")}")
 
-	// ucum is a dependency of the FHIRPathEngine
-	implementation("org.fhir", "ucum", "1.0.8")
+    // ucum is a dependency of the FHIRPathEngine
+    implementation("org.fhir", "ucum", "1.0.8")
 
     // GSON for our JSON needs
     implementation("com.google.code.gson", "gson", "2.10.1")
