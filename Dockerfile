@@ -1,6 +1,6 @@
 FROM openjdk:11 AS build
 
-RUN curl -ksSL https://gitlab.mitre.org/mitre-scripts/mitre-pki/raw/master/os_scripts/install_certs.sh | MODE=ubuntu sh
+# RUN curl -ksSL https://gitlab.mitre.org/mitre-scripts/mitre-pki/raw/master/os_scripts/install_certs.sh | MODE=ubuntu sh
 
 WORKDIR /home
 # Grab Gradle first so it can be cached
