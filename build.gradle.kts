@@ -58,7 +58,6 @@ tasks {
 }
 
 tasks.test {
-    environment(mapOf("DISABLE_TX" to "true"))
     maxHeapSize = "6144m"
     useJUnitPlatform()
     testLogging {
