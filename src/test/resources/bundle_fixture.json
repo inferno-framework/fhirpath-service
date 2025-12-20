@@ -1,0 +1,60 @@
+{
+  "resourceType": "Bundle",
+  "id": "12345",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "12345",
+        "name": [
+          {
+            "resourceType": "HumanName",
+            "given": ["A"]
+          },
+          {
+            "resourceType": "HumanName",
+            "given": ["B"]
+          },
+          {
+            "resourceType": "HumanName",
+            "given": ["C"]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "en-US",
+                  "display": "English (United States)"
+                }
+              ]
+            },
+            "preferred": true
+          },
+          {
+            "language": {
+              "coding": [
+                {
+                  "system": "urn:ietf:bcp:47",
+                  "code": "zh-CN",
+                  "display": "Chinese (China)"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+       "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "67890",
+        "subject": {
+          "reference": "Patient/12345"
+        }
+      }
+    }
+  ]
+}

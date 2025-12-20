@@ -45,21 +45,31 @@ class FHIRPathEvaluatorTest {
         "["
           + "{"
             + "\"type\":\"Patient.communication\","
-              + "\"element\":{"
-                + "\"language\":{"
-                  + "\"coding\":["
-                    + "{"
-                      + "\"system\":\"urn:ietf:bcp:47\","
-                      + "\"code\":\"en-US\","
-                      + "\"display\":\"English (United States)\""
-                    + "}"
-                  + "]"
-                + "},"
+            + "\"element\":{"
+              + "\"language\":{"
+                + "\"coding\":["
+                  + "{"
+                    + "\"system\":\"urn:ietf:bcp:47\","
+                    + "\"code\":\"en-US\","
+                    + "\"display\":\"English (United States)\""
+                  + "}"
+                + "]"
+              + "},"
               + "\"preferred\":true"
             + "}"
           + "}"
         + "]",
         pathEvaluator.evaluateToString(patient, "Patient.communication.where(preferred = true)")
+    );
+
+    Resource bundle = loadResource("bundle_fixture.json");
+    assertEquals(
+        "["
+          + "{"
+            + "\"type\":\"id\",\"element\":\"67890\""
+          + "}"
+        + "]",
+        pathEvaluator.evaluateToString(bundle, "Bundle.entry.resource.ofType(ServiceRequest).id")
     );
   }
 
