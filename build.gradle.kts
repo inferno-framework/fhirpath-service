@@ -30,6 +30,9 @@ dependencies {
     // Web Server
     implementation("com.sparkjava", "spark-core", "2.9.4")
 
+    // Package Loading
+    implementation("org.apache.commons", "commons-compress", "1.28.0")
+
     // Testing stuff
     testImplementation("org.junit.jupiter", "junit-jupiter", "5.9.3")
 }

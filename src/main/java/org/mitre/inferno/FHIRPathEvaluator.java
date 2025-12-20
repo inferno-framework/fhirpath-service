@@ -7,11 +7,12 @@ import org.hl7.fhir.exceptions.FHIRException;
 import org.hl7.fhir.r4.context.SimpleWorkerContext;
 import org.hl7.fhir.r4.fhirpath.FHIRPathEngine;
 import org.hl7.fhir.r4.model.Base;
+import org.hl7.fhir.utilities.npm.FilesystemPackageCacheManager;
 
 public class FHIRPathEvaluator extends FHIRPathEngine {
 
   public FHIRPathEvaluator() throws IOException {
-    super(new SimpleWorkerContext());
+    super(SimpleWorkerContext.fromPackage(new FilesystemPackageCacheManager.Builder().build().loadPackage("hl7.fhir.r4.core#4.0.1", null))); 
   }
 
   @Override
