@@ -10,9 +10,14 @@ import org.hl7.fhir.r4.model.Base;
 import org.hl7.fhir.utilities.npm.FilesystemPackageCacheManager;
 
 public class FHIRPathEvaluator extends FHIRPathEngine {
-
+  /**
+   * Initialize with FHIR R4 Core definitions.
+   */
   public FHIRPathEvaluator() throws IOException {
-    super(SimpleWorkerContext.fromPackage(new FilesystemPackageCacheManager.Builder().build().loadPackage("hl7.fhir.r4.core#4.0.1", null))); 
+    super(SimpleWorkerContext.fromPackage(
+          new FilesystemPackageCacheManager.Builder().build()
+              .loadPackage("hl7.fhir.r4.core#4.0.1", null)
+    )); 
   }
 
   @Override
