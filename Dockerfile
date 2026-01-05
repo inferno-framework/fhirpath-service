@@ -1,4 +1,4 @@
-FROM openjdk:11 AS build
+FROM eclipse-temurin:17 AS build
 
 # RUN curl -ksSL https://gitlab.mitre.org/mitre-scripts/mitre-pki/raw/master/os_scripts/install_certs.sh | MODE=ubuntu sh
 

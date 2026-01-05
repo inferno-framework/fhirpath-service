@@ -12,6 +12,10 @@ the functionality provided by this service is [implemented within the HL7® FHIR
 Core library](https://github.com/hapifhir/org.hl7.fhir.core), which is
 developed and maintained independently of this project.
 
+## Definitions
+
+The base FHIR R4 definitions are loaded during setup. No other IGs or FHIR
+versions are currently available.
 
 ## REST API
 
